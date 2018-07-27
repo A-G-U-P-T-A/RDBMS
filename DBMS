@@ -1,0 +1,11 @@
+Data:		Collection of related information is called data.
+
+Database:	Collection of related data that gets stored in an organized manner is called database.
+
+DBMS:		It is the concept that facilitates the users while they store, manage and retrieve the data from the database.
+
+DBMS concept got developed into 3 different ways:
+
+1.	Hierarchical model
+2.	Network model
+3.	Relational model
