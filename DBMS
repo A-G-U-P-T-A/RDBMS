@@ -1,3 +1,5 @@
+DBMS
+
 Data:		Collection of related information is called data.
 
 Database:	Collection of related data that gets stored in an organized manner is called database.
@@ -6,6 +8,30 @@ DBMS:		It is the concept that facilitates the users while they store, manage and
 
 DBMS concept got developed into 3 different ways:
 
-1.	Hierarchical model
+1.	Hierarchical model (IMSDB)
 2.	Network model
-3.	Relational model
+3.	Relational model (RDBMS)
+
+RDBMS
+
+This is the software got developed based on the Codd's rules of relational databases.
+
+This extends the data abstraction into 3 different levels. Those are:-
+1.	External or representative view
+2.	Logical or conceptual view
+3.	Physical or internal view
+
+In each and every Relational Database there exists some special data that keeps track of all the details about the user data. Such
+data is know as metadata. i.e. (data about data)
+
+In Relational Database metadata gets stored in a separate location from user data.
+
+Contents of metadata are as follows:
+1.	The user credential information.
+2.	All the database objects created by each and every user.
+3.	All the list of columns present in each and every object.
+4.	Logical location of the data. (table space)
+5.	Physical location of the data.
+6.	The detials of the enforced integrity constrints.
+7.	The existence of all the available indexes.
+8.	The permission detials of different users on different objects.
