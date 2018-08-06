@@ -59,4 +59,17 @@ repetition vs. redundancy
 ---------------------------------------------------------------------------------------------------------------------------------
 redundancy is caused by repetition of data due to "functional dependency".
 
+---------------------------------------------------------------------------------------------------------------------------------
+normalization vs. normal form
+---------------------------------------------------------------------------------------------------------------------------------
+Normalization is the systematic  process applied on the relations to reduce the degree of redundancy. It is defined as a 
+systematic process as it will always give a guarantee for the following points:
+
+1. Lossless decomposition
+2. Dependency preservation
+
+Normal Form is the property of relation that indicates the amount of redundancy present in the relation.
+
+Normal form ∝ 1/(degree of redundancy)
+
 
