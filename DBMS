@@ -1,5 +1,6 @@
+---------------------------------------------------------------------------------------------------------------------------------
 DBMS
-
+---------------------------------------------------------------------------------------------------------------------------------
 Data:		Collection of related information is called data.
 
 Database:	Collection of related data that gets stored in an organized manner is called database.
@@ -11,9 +12,9 @@ DBMS concept got developed into 3 different ways:
 1.	Hierarchical model (IMSDB)
 2.	Network model
 3.	Relational model (RDBMS)
-
+---------------------------------------------------------------------------------------------------------------------------------
 RDBMS
-
+---------------------------------------------------------------------------------------------------------------------------------
 This is the software got developed based on the Codd's rules of relational databases.
 
 This extends the data abstraction into 3 different levels. Those are:-
@@ -35,3 +36,27 @@ Contents of metadata are as follows:
 6.	The detials of the enforced integrity constrints.
 7.	The existence of all the available indexes.
 8.	The permission detials of different users on different objects.
+---------------------------------------------------------------------------------------------------------------------------------
+Oracle Database
+---------------------------------------------------------------------------------------------------------------------------------
+                                   .-'''''''-. <------------------(system.dbf)
+                                 .'...........'.
+                                /   \       /   \
+                               ;     ;     ;  .  ; <----;--------(redo log files)
+     (control.ch)------------> |     |     |     |      |
+                               ;     ;     ;  .  ; <----:
+                                \   /       \   /
+                                 '.'         '.'
+                                   '-._____.-'
+---------------------------------------------------------------------------------------------------------------------------------
+Two ways to perform a select an index in a table.
+---------------------------------------------------------------------------------------------------------------------------------
+Table Scan -> Equivalent to linear search.
+Index Seek -> Equivalent to binary search.
+
+---------------------------------------------------------------------------------------------------------------------------------
+repetition vs. redundancy
+---------------------------------------------------------------------------------------------------------------------------------
+redundancy is caused by repetition of data due to "functional dependency".
+
+
