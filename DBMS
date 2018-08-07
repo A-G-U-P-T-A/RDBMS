@@ -1,6 +1,7 @@
 ---------------------------------------------------------------------------------------------------------------------------------
 DBMS
 ---------------------------------------------------------------------------------------------------------------------------------
+
 Data:		Collection of related information is called data.
 
 Database:	Collection of related data that gets stored in an organized manner is called database.
@@ -12,9 +13,11 @@ DBMS concept got developed into 3 different ways:
 1.	Hierarchical model (IMSDB)
 2.	Network model
 3.	Relational model (RDBMS)
+
 ---------------------------------------------------------------------------------------------------------------------------------
 RDBMS
 ---------------------------------------------------------------------------------------------------------------------------------
+
 This is the software got developed based on the Codd's rules of relational databases.
 
 This extends the data abstraction into 3 different levels. Those are:-
@@ -36,6 +39,7 @@ Contents of metadata are as follows:
 6.	The detials of the enforced integrity constrints.
 7.	The existence of all the available indexes.
 8.	The permission detials of different users on different objects.
+
 ---------------------------------------------------------------------------------------------------------------------------------
 Oracle Database
 ---------------------------------------------------------------------------------------------------------------------------------
@@ -48,15 +52,18 @@ Oracle Database
                                 \   /       \   /
                                  '.'         '.'
                                    '-._____.-'
+
 ---------------------------------------------------------------------------------------------------------------------------------
 Two ways to perform a select an index in a table.
 ---------------------------------------------------------------------------------------------------------------------------------
+
 Table Scan -> Equivalent to linear search.
 Index Seek -> Equivalent to binary search.
 
 ---------------------------------------------------------------------------------------------------------------------------------
 repetition vs. redundancy
 ---------------------------------------------------------------------------------------------------------------------------------
+
 redundancy is caused by repetition of data due to "functional dependency".
 
 ex:
@@ -67,9 +74,11 @@ roll number ->  name
 103             pqr         |------(due to functional dependency we can see that row (101, xyz) got repeated)
 104             mno         |
 101             xyz <-------'
+
 ---------------------------------------------------------------------------------------------------------------------------------
 normalization vs. normal form
 ---------------------------------------------------------------------------------------------------------------------------------
+
 Normalization is the systematic  process applied on the relations to reduce the degree of redundancy. It is defined as a 
 systematic process as it will always give a guarantee for the following points:
 
@@ -87,6 +96,7 @@ Note: When normalization process gets applied on the relation it would perform t
 ---------------------------------------------------------------------------------------------------------------------------------
 Procedure for finding highest normal form of a given relation
 ---------------------------------------------------------------------------------------------------------------------------------
+
 Step 1. Find all the possible candidate keys of given relation.
 Step 2. Identify all the existing prime or key attributes and non-prime or non-key attributes of the given relation
 Step 3. Identify all the existing full dependencies, partial dependencies, transitive dependencies and the overlapping candidate
@@ -96,6 +106,7 @@ Step 4. Refer to the definitions and the hierarchy of normal forms for finding t
 ---------------------------------------------------------------------------------------------------------------------------------
 Functional Dependencies
 ---------------------------------------------------------------------------------------------------------------------------------
+
 The attributes that exists on the LHS of the functional dependency is called determinant.
 The attribute that exist on the RHS of the functional depenedency is called dependent.
 
@@ -114,6 +125,7 @@ Flow diagram for validating functional dependencies
 ---------------------------------------------------------------------------------------------------------------------------------
 Reflexsive axiom
 ---------------------------------------------------------------------------------------------------------------------------------
+
 According to this rule of functional dependencies all the trivial dependencies would always be valid.
 
 ex: X->X, A->A (trivial dependencies)
@@ -121,6 +133,7 @@ ex: X->X, A->A (trivial dependencies)
 ---------------------------------------------------------------------------------------------------------------------------------
 Decomposition axiom
 ---------------------------------------------------------------------------------------------------------------------------------
+
 If there exists functional depenedencies like X->YZ then we could always derive X->Y and X->Z.
 
 decomposition axiom should always get applied only on the determinant side.
@@ -128,11 +141,37 @@ decomposition axiom should always get applied only on the determinant side.
 ---------------------------------------------------------------------------------------------------------------------------------
 Super Key
 ---------------------------------------------------------------------------------------------------------------------------------
+
 An attribute or the combination of attributes is called super key iff all the attributes of the relation are derived by the 
 attribute.
 
+  A | B | C
+  1 | 2 | 3
+  2 | 2 | 3
+  3 | 2 | 3
+  4 | 3 | 2
+  5 | 2 | 3
+  6 | 3 | 2
 
+in the above example we can conclude,
 
+A->A  AB->A  AC->A  ABC->A
+A->B  AB->B  AC->B  ABC->B
+A->C  AB->C  AB->C  ABC->C
+
+Hence, A, AB, AC, ABC are super keys.
+
+Find the closure of the super keys.
+
+  A   |  AB  |  AC  |  ABC <---------------------- (super keys)
+  ϕ   |  ϕ   |  ϕ   |  ϕ
+  A   |  A   |  A   |  A
+  ^   |  B   |  C   |  B
+  |   |  AB  |  AC  |  C
+  |   |      |      |  AB
+  |   |      |      |  AC
+  |   |      |      |  ABC
+  |__________________________(candidate key)
 
 
 
