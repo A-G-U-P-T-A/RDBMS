@@ -111,3 +111,29 @@ Flow diagram for validating functional dependencies
 
 
 
+---------------------------------------------------------------------------------------------------------------------------------
+Reflexsive axiom
+---------------------------------------------------------------------------------------------------------------------------------
+According to this rule of functional dependencies all the trivial dependencies would always be valid.
+
+ex: X->X, A->A (trivial dependencies)
+
+---------------------------------------------------------------------------------------------------------------------------------
+Decomposition axiom
+---------------------------------------------------------------------------------------------------------------------------------
+If there exists functional depenedencies like X->YZ then we could always derive X->Y and X->Z.
+
+decomposition axiom should always get applied only on the determinant side.
+
+---------------------------------------------------------------------------------------------------------------------------------
+Super Key
+---------------------------------------------------------------------------------------------------------------------------------
+An attribute or the combination of attributes is called super key iff all the attributes of the relation are derived by the 
+attribute.
+
+
+
+
+
+
+
