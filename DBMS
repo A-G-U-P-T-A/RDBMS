@@ -203,14 +203,81 @@ The attribute and attributes of the relation those are not present in any of the
 or non key attributes.
 In order to find an attribute is prime or non prime we should identify all the possible candidate keys.
 
+---------------------------------------------------------------------------------------------------------------------------------
+Full Dependency
+---------------------------------------------------------------------------------------------------------------------------------
 
+If there exists an attribute X ∈ R gets derived by either a candidate key or a super key then such a depency is called as
+full dependency.
 
+ __________                   ______________________
+|          |                 | X ∈ R,               |
+|c.k or s.k| --------------> | X = non prime/non key|
+|__________|                 |______________________|
 
+Note 1: While identifying the full dependency we shall verify that determinant is either candidate key or super key then
+        irresepective of the dependent we can identify such dependency as full dependency.
 
+Note 2: The amount of redundancy that gets caused by each and every full dependency must be zero.
 
+Note 3: Normalization process will not target eliminating full dependencies.
 
+---------------------------------------------------------------------------------------------------------------------------------
+Partial Dependency
+---------------------------------------------------------------------------------------------------------------------------------
 
+If in case non prime or non key attribute of the relation gets derived by only one part of the candidate key such dependency
+is defined as partial dependency.
 
+       |
+ ______|___                   ______________________
+|      |   |                 | X ∈ R,               |
+|c.k or s.k| --------------> | X = non prime/non key|
+|______|___|                 |______________________|
+       | 
+       | <----------------- (when candidate key is composite this depenedency can occur.) 
+       | 
+
+Note 1: While identifying the partial dependency we should verify that the dependent is a non prime attribute and 
+        determinant is a part of candidate key.
+
+Note 2: Partial dependencies could cause redundancy in the relations and hence normalization process would want to eliminate
+        them.
+        
+Note 3: If there exists a relation that has the property of having simple candidate keys only then, the total number of partial
+        dependencies could be present in such relation are always zero.
+
+---------------------------------------------------------------------------------------------------------------------------------
+Transitive Dependency
+---------------------------------------------------------------------------------------------------------------------------------
+
+If a non prime or non key attribute of the relation gets derived by either another non prime attribute or the combination
+of part of candidate key along with another non-prime attribute then such dependency is defined as transitive dependency.
+
+                     (non prime/non key)
+       |                |
+ ______|___ _____       |          ______________________
+|      |   |/////|<-----'         | X ∈ R,               |
+|c.k or s.k|/////|--------------> | X = non prime/non key|
+|______|___|/////|                |______________________|
+       | 
+       | <----------------- (when candidate key is composite this depenedency can occur.) 
+       | 
+
+OR another situation is,
+
+ __________                   ______________________
+|non prime |                 | X ∈ R,               |
+|or non key| --------------> | X = non prime/non key|
+|__________|                 |______________________|
+
+Note 1: While identifying transitive dependencies we should verify that the dependent is non prime attribute or combination
+        of part of candidate key along with non prime attribute.
+
+Note 2: Transitive dependency could cause redundancy in the relation and hence normalization would want to eliminate them.
+
+Note 3: If there exist a relation in which total number of possible non prime attributes are zero then the partial and 
+        transitive dependency would exist in such relations.
 
 
 
