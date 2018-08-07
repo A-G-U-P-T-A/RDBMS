@@ -166,12 +166,57 @@ Find the closure of the super keys.
   A   |  AB  |  AC  |  ABC <---------------------- (super keys)
   ϕ   |  ϕ   |  ϕ   |  ϕ
   A   |  A   |  A   |  A
-  ^   |  B   |  C   |  B
+  ↑   |  B   |  C   |  B
   |   |  AB  |  AC  |  C
   |   |      |      |  AB
   |   |      |      |  AC
   |   |      |      |  ABC
   |__________________________(candidate key)
+
+1. Super keys can either be simple or composite.
+2. A relation can have more than one super key.
+3. For the above relation total number of possible super keys are: A AB AC ABC
+
+---------------------------------------------------------------------------------------------------------------------------------
+Candidate Key
+---------------------------------------------------------------------------------------------------------------------------------
+
+An attribute or a combination of attributes is called as candidate keys iff
+1. They deirve all the attributes of the relation.
+2. Those are the minimal subset of super key for deriving all the attributes.
+
+Note 1: Candidate keys can be either simple or composite.
+Note 2: Relations can have more than one candidate key.
+Note 3: Minimal subset is always found based on level of subset and never formed based on number of attributes.
+
+---------------------------------------------------------------------------------------------------------------------------------
+Prime or Key Attribute
+---------------------------------------------------------------------------------------------------------------------------------
+
+The attribute of relation that is present in at least one of the possible candidate keys is called prime or key attribute.
+
+---------------------------------------------------------------------------------------------------------------------------------
+Non-Prime or Non-Key Attribute
+---------------------------------------------------------------------------------------------------------------------------------
+
+The attribute and attributes of the relation those are not present in any of the possible candidate keys are called non prime 
+or non key attributes.
+In order to find an attribute is prime or non prime we should identify all the possible candidate keys.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
