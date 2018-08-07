@@ -59,6 +59,14 @@ repetition vs. redundancy
 ---------------------------------------------------------------------------------------------------------------------------------
 redundancy is caused by repetition of data due to "functional dependency".
 
+ex:
+
+roll number ->  name
+101             xyz <-------;
+102             abc         |
+103             pqr         |------(due to functional dependency we can see that row (101, xyz) got repeated)
+104             mno         |
+101             xyz <-------'
 ---------------------------------------------------------------------------------------------------------------------------------
 normalization vs. normal form
 ---------------------------------------------------------------------------------------------------------------------------------
@@ -93,5 +101,13 @@ The attribute that exist on the RHS of the functional depenedency is called depe
 
 ex: roll number  ->  name
     (determinant)    (dependent)
+
+---------------------------------------------------------------------------------------------------------------------------------
+Flow diagram for validating functional dependencies
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
