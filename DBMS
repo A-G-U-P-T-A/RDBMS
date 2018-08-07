@@ -72,4 +72,26 @@ Normal Form is the property of relation that indicates the amount of redundancy 
 
 Normal form ∝ 1/(degree of redundancy)
 
+Note: When normalization process gets applied on the relation it would perform the following tasks:
+1.  Find the highest normal form of given relation.
+2.  Decompose the relation from its existing normal form to higher normal form.
+
+---------------------------------------------------------------------------------------------------------------------------------
+Procedure for finding highest normal form of a given relation
+---------------------------------------------------------------------------------------------------------------------------------
+Step 1. Find all the possible candidate keys of given relation.
+Step 2. Identify all the existing prime or key attributes and non-prime or non-key attributes of the given relation
+Step 3. Identify all the existing full dependencies, partial dependencies, transitive dependencies and the overlapping candidate
+key dependencies
+Step 4. Refer to the definitions and the hierarchy of normal forms for finding the highest normal form of give relation.
+
+---------------------------------------------------------------------------------------------------------------------------------
+Functional Dependencies
+---------------------------------------------------------------------------------------------------------------------------------
+The attributes that exists on the LHS of the functional dependency is called determinant.
+The attribute that exist on the RHS of the functional depenedency is called dependent.
+
+ex: roll number  ->  name
+    (determinant)    (dependent)
+
 
